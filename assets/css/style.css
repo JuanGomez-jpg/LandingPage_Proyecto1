@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,300&display=swap');
 
 :root {
-    --color-body: #b6cbce;
-    --color-heading: #eef3db;
-    --color-base: #033f47;
-    --color-base2: #022a30;
-    --color-brand: #e0f780;
-    --color-brand2: #deff58;
+    --color-body: #ffffff; /* Letra */
+    --color-heading: #fdfff7; /* Letra negritas */
+    --color-base: #b94fd9; /* Color cartas */
+    --color-base2: #690093;
+    --color-brand: #ffffff;
+    --color-brand2: #43006a;
+    --color-brand3: #3c003b;
     --sidbar-width: 240px;
-    --font-base: "Bai Jamjuree";
+    --font-base: 'Montserrat', sans-serif;
 }
 
 body {
@@ -37,7 +38,8 @@ img {
 }
 
 .text-brand {
-    color: var(--color-brand);
+    color: rgb(243, 176, 255);
+    font-weight: bold;
 }
 
 .bg-base {
@@ -52,15 +54,15 @@ img {
     justify-content: center;
     padding-top: 80px;
     padding-bottom: 80px;
-    border-bottom: 2px solid rgba(255,255,255, 0.1);
+    border-bottom: 2px solid rgb(119, 41, 147); /* Separador */
 }
 
 .shadow-effect {
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .shadow-effect:hover {
-    box-shadow: -6px 6px 0 0 var(--color-brand);
+    box-shadow: -3px 3px 0 0 var(--color-brand);
 }
 
 .iconbox {
@@ -76,13 +78,16 @@ img {
 
 /* NAVBAR */
 .navbar {
-    background-color: var(--color-base);
+    background-color: rgb(72, 72, 72);
+    font-size: 17px;
+    font-weight: bold;
 }
 
 .navbar .nav-link {
     font-weight: 700;
+    font-size: 18px;
     text-transform: uppercase;
-    color: #fff;
+    color: #f6f6f6;
 }
 
 .navbar .nav-link:hover {
@@ -90,20 +95,21 @@ img {
 }
 
 .navbar .nav-link.active {
-    color: var(--color-brand);
+    color: rgb(193, 151, 199);
+    font-size: 21px;
 }
 
 @media (min-width: 992px) {
     .navbar {
         min-height: 100vh;
         width: var(--sidbar-width);
-        background: linear-gradient(rgba(3, 63, 71, 0.8), rgba(3, 63, 71, 0.8)), url(../images/sidebar-img.jpg);
+        background-color: rgb(72, 72, 72);
         background-size: cover;
         background-position: center;
     }
 
     .navbar-brand img {
-        border: 8px solid var(--color-brand);
+        border: 5px solid var(--color-heading);
     }
 
     /* CONTENT WRAPPER */
@@ -119,16 +125,16 @@ img {
 }
 
 .btn-brand {
-    background-color: var(--color-brand);
-    border-color: var(--color-brand);
-    color: var(--color-base);
+    background-color: var(--color-base);
+    border-color: var(--color-base);
+    color: var(--color-body);
 }
 
 .btn-brand:hover,
 .btn-brand:focus {
-    background-color: var(--color-brand2);
-    color: var(--color-base);
-    border-color: var(--color-brand2);
+    background-color: var(--color-body);
+    color: var(--color-brand3);
+    border-color: var(--color-brand3);
 }
 
 .link-custom {
@@ -157,27 +163,29 @@ img {
 }
 
 .card-custom .card-custom-image img {
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 .card-custom:hover .card-custom-image img {
-    transform: scale(1.1);
+    transform: scale(1.03);
 }
 
 /* CONTACT */
 #contact .form-control {
-    background-color: var(--color-base);
-    border-color: var(--color-base);
-    color: var(--color-body);
+    background-color: rgb(243, 243, 243);
+    border-color: var(--color-brand3);
+    color: var(--color-brand3);
+    font-size: 18px;
+    font-weight: bold;
 }
 
 #contact .form-control:focus {
-    border-color: var(--color-brand);
+    border: red;
     box-shadow: none;
 }
 
 #contact .form-control::placeholder {
-    color: var(--color-body);
+    color: var(--color-brand3);
 }
 
 #contact input.form-control {
